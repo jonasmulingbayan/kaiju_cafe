@@ -5,13 +5,12 @@ body{
 }
 main#main{
 	width:100%;
-	height: calc(100%);
+	height: 100vh;
 	background:white;
+	display: flex;
         
 }
 #login-right{
-	position: absolute;
-	right:0;
 	width:40%;
 	height: calc(100%);
 	background:white;
@@ -19,13 +18,12 @@ main#main{
 	align-items: center;
 }
 #login-left{
-	position: absolute;
-	left:0;
 	width:60%;
 	height: calc(100%);
 	background:#770c23;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 #login-right .card{
 	margin: auto
@@ -67,4 +65,38 @@ main#main{
 .form-control:focus{
     border: 1px solid #770c23;
     box-shadow: none;
+}
+
+@media(max-width:1150px){
+	#login-right{
+		width:50%;
+	}
+	#login-left{
+		width:50%;
+	}
+
+	.logo img{
+		height: 150px;
+		width: 250px;
+		margin: auto;
+		margin-left:-50px;
+	}
+}
+
+@media(max-width:998px){
+	#login-right{
+		width:100%;
+		background: #770c23;
+	}
+	#login-left{
+		width:50%;
+		display: none;
+	}
+
+	.logo img{
+		height: 150px;
+		width: 250px;
+		margin: auto;
+		margin-left:-50px;
+	}
 }
