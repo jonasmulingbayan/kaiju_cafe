@@ -1,0 +1,106 @@
+:root {
+    --bs-success-rgb: 71, 222, 152 !important;
+}
+#reservationDateGraph,
+#reservationTimeGraph{
+    width:100% !important;
+    height: 350px !important;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+.btn-info.text-light:hover,
+.btn-info.text-light:focus {
+    background: #000;
+}
+table,
+tbody,
+td,
+tfoot,
+th,
+head,
+tr {
+    border-color: #000 !important;
+    border-style: solid;
+    border-width: 1px !important;
+}
+.status-cancel {
+    background-color: red !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.status-accepted {
+    background-color: green !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.status-finished {
+    background-color: blue !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.status-pending {
+    background-color: black !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+th.fc-col-header-cell.fc-day.fc-day-sat,
+th.fc-col-header-cell.fc-day.fc-day-sun{
+    background:  #770c23 !important;
+    color:#fff !important;
+}
+td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-past,
+td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-today,
+td.fc-daygrid-day.fc-day.fc-day-sat.fc-day-future,
+td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-past,
+td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-today,
+td.fc-daygrid-day.fc-day.fc-day-sun.fc-day-future{
+    color: #770c23 !important;
+}
+/* Customize navigation arrows */
+.fc-prev-button,
+.fc-next-button {
+    background-color: #770c23; /* Your desired color */
+    color: #fff; /* Text color */
+    border:none !important; /* Border color */
+}
+
+/* Hover and Focus styles for navigation arrows */
+.fc-prev-button:hover,
+.fc-prev-button:focus,
+.fc-next-button:hover,
+.fc-next-button:focus {
+    box-shadow: none !important;
+    background-color: #fff; /* Darker shade for hover/focus */
+    color: #770c23; /* Text color */
+    border:1px solid #770c23 !important; /* Border color */
+}
+
+.fc-toolbar-chunk button{
+    background: #770c23 !important;
+    color:#fff !important;
+    border: 1px solid #fff !important;
+}
+
+.fc-toolbar-chunk button:focus,
+.fc-toolbar-chunk button:hover{
+    box-shadow: none !important;
+    background: #fff !important;
+    color:#770c23 !important;
+    border: 1px solid #770c23 !important;
+}
+
+@media(max-width:800px){
+    #reservationDateGraph,
+    #reservationTimeGraph{
+        width:50% !important;
+        height: 350px !important;
+    }
+}

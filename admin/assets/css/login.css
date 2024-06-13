@@ -1,0 +1,70 @@
+body{
+	width: 100%;
+	height: calc(100%);
+	/*background: #007bff;*/
+}
+main#main{
+	width:100%;
+	height: calc(100%);
+	background:white;
+        
+}
+#login-right{
+	position: absolute;
+	right:0;
+	width:40%;
+	height: calc(100%);
+	background:white;
+	display: flex;
+	align-items: center;
+}
+#login-left{
+	position: absolute;
+	left:0;
+	width:60%;
+	height: calc(100%);
+	background:#770c23;
+	display: flex;
+	align-items: center;
+}
+#login-right .card{
+	margin: auto
+}
+.logo {
+	margin: auto;
+	font-size: 8rem;
+	height: 29vh;
+	width: 13vw;
+	display: flex;
+	align-items: center;
+}
+.logo img{
+	height: 250px;
+	width: 300px;
+	margin: auto
+}
+.card{
+    border:3px solid #770c23;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#show{
+    margin-left:-40px;
+    width:40px;
+    height:38px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+#hide{
+    margin-left:-40px;
+    width:40px;
+    height:38px;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+.form-control:focus{
+    border: 1px solid #770c23;
+    box-shadow: none;
+}

@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #770c23;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/Kaiju_bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.logo-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 470px; /* Adjust the width of the logo */
+}
+
+.table-page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 80px;
+  width: 1675px;
+}
+
+.numbering-container {
+  display: flex;
+  margin-bottom: 20px;
+  width: auto;
+  margin-top: 0;
+}
+
+.numbering {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 150px; /* Adjust the spacing between numbering elements */
+  color: #000000;
+}
+
+.first-number,
+.first-label {
+  color: #91273E; /* Change this to the color you want */
+}
+
+.number {
+  font-size: 45px; /* Adjust the font size of the numbering */
+  font-weight: bold;  
+}
+
+.number-label {
+  margin-left: 50px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.loading-line {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+}
+
+.line1 {
+  width: 420px; /* Adjust the width of the loading line */
+  height: 6px; /* Adjust the height of the loading line */
+  background-color: #91273E;
+  margin: 10px 0; /* Adjust the spacing between numbering and line */
+}
+
+.line2 {
+  width: 1100px; 
+  height: 6px; 
+  background-color: #B2AEAE;
+  margin: 10px 0; 
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Basic styles for the dropdowns */
+.dropdown select {
+  padding: 40px 80px; 
+  font-size: 20px; 
+  border-radius: 5px; 
+  border: 4px solid #ccc; 
+  background-color: #f9f9f9; 
+  color: #737373; 
+  font-size: 30px;
+  font-weight: 500;
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+}
+
+/* Additional styles for dropdown container */
+.dropdown {
+  position: relative; /* Position relative to parent */
+  display: inline-block; /* Inline block display */
+  margin: 0; /* Margin around each dropdown */
+}
+
+/* Add a custom arrow to the dropdown */
+.dropdown::after {
+  content:  '\f0d7'; /* Font Awesome down arrow */
+  font-size: 35px;
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 50%; /* Center vertically */ 
+  right: 15px; /* Position from the right */
+  pointer-events: none; /* Allow click-through */
+  transform: translateY(-50%); /* Adjust for centering */
+  color: #000000; 
+  margin-right: 20px;
+}
+
+/* Hover effect for dropdown */
+.dropdown select:hover, .dropdown input[type="text"]:hover {
+  border-color: #91273E; 
+  background-color: #fff; /* Change background on hover */
+}
+
+.dropdown input[type="text"], .flatpickr-input, .flatpickr-input:focus, .flatpickr-input:hover {
+  padding: 40px 20px; 
+  font-size: 30px; 
+  font-weight: 500; 
+  border-radius: 5px; 
+  border: 4px solid #ccc; 
+  background-color: #f9f9f9; 
+  color: #737373; 
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+}
+
+button {
+  padding: 40px 70px;
+  font-size: 35px; 
+  text-shadow: 1px 3px 2px rgba(255, 255, 255, 0.219);
+  font-weight: bolder;
+  border: none;
+  border-top-right-radius: 15px; 
+  border-bottom-right-radius: 15px; 
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #92344a;
+  color: #ffffff;
+  text-shadow: 1px 3px 2px rgba(255, 255, 255, 0.137);
+}

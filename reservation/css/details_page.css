@@ -1,0 +1,344 @@
+body {
+  padding:40px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #770c23;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/Kaiju_bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+form{
+  width:100%;
+}
+label{
+  text-align:left;
+}
+.detail-page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 40px; /* Adjusted padding */
+  width: 80%; /* Changed width to percentage for responsiveness */
+  max-width: 100%; /* Set a max-width */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  
+}
+
+.numbering-container {
+  display: flex;
+  margin-bottom: 15px; /* Reduced margin-bottom */
+  width: auto;
+}
+
+.numbering {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 50px; /* Reduced margin-right */
+  color: #000000;
+}
+
+.second-number,
+.second-label {
+  color: #91273E; /* Change this to the color you want */
+}
+
+.number {
+  font-size: 28px; /* Reduced font size */
+  font-weight: bold;  
+}
+
+.number-label {
+  margin-left: 20px; /* Reduced margin-left */
+  font-size: 28px; /* Reduced font size */
+  font-weight: bold;
+}
+
+.loading-line {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;/* Reduced margin-left */
+}
+
+.line1,
+.line2,
+.line3,
+.line4 {
+  height: 4px; /* Reduced height of loading lines */
+  margin: 5px 0; /* Reduced margin */
+}
+
+.line1 {
+  width: 290px; /* Reduced width */
+  background-color: #B2AEAE;
+}
+
+.line2 {
+  width: 275px; /* Reduced width */
+  background-color: #91273E;
+}
+
+.line3 {
+  width: 405px; /* Reduced width */
+  background-color: #B2AEAE;
+}
+
+.line4 {
+  width: 400px; /* Reduced width */
+  background-color: #cecece;
+  height: 1px;
+  margin-top: 20px;
+}
+
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 160px; /* Add some space between the columns */
+}
+
+.form-left, .form-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-left {
+  justify-content: center;
+  align-items: end;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.input-container input {
+  padding: 18px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  transition: all 0.3s;
+  width: 280px;
+}
+
+.input-container.active input {
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-60%);
+  color: #838383;
+  font-weight: bolder;
+  pointer-events: none;
+  transition: all 0.3s;
+  width: 300px;
+}
+
+.input-container.active label {
+  top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #770c23;
+}
+
+.occasion-container select,
+.special-request-container textarea {
+  width: 300px;
+  padding: 12px 10px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #7e7e7e;
+  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.occasion-container select {
+  width: 320px;
+  margin-bottom: 5px;
+}
+
+.special-request-container textarea {
+  height: 50px;
+  resize: vertical;
+  color: #7e7e7e;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 90px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  display: none; 
+}
+
+.checkbox-group label {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  position: relative; 
+  padding-left: 45px; 
+  cursor: pointer; 
+}
+
+.checkbox-group label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; 
+  height: 20px; 
+  border: 1px solid #770c23;
+  border-radius: 4px; 
+  background-color: white; 
+  pointer-events: none; 
+}
+
+.checkbox-group input[type="checkbox"]:checked + label::before {
+  background-color: #770c23; 
+  border-color: #770c23; 
+}
+
+.checkbox-group input[type="checkbox"]:checked + label::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free'; 
+  font-weight: 900; 
+  position: absolute;
+  left: 4px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: white; 
+  font-size: 16px; 
+  pointer-events: none; 
+}
+
+
+/* Right part: Reservation Details styling */
+.form-right h2 {
+  font-size: 22px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.reservation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 10px;
+
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #414144;
+}
+
+.info-item i {
+  margin-right: 10px; 
+  font-weight: bolder; 
+  font-size: 24px; 
+  color: #414144;
+}
+
+.form-right h3 {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.form-right p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-right .p-wrapper{
+  max-width: 340px;
+  margin: 0;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 8px;
+}
+
+button[type="submit"] {
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;  
+  font-weight: bolder;
+  border: none;
+  width: 700px;
+  height: 80px;
+  border-radius: 7px;;
+  font-size: 35px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #770c23;
+  color: #ffffff;
+}
